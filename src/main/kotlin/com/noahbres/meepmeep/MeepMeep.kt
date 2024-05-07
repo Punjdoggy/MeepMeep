@@ -333,7 +333,10 @@ open class MeepMeep @JvmOverloads constructor(private val windowSize: Int, fps: 
                 colorManager.isDarkMode = false
                 ImageIO.read(classLoader.getResourceAsStream("background/season-2023-centerstage/field-2023-juice-light.png"))
             }
-
+            Background.OFF_SEASON_BGS -> {
+                colorManager.isDarkMode = false
+                ImageIO.read(classLoader.getResourceAsStream("background/offseason-2024-bgs/field-2024.png"))
+            }
         }.getScaledInstance(windowSize, windowSize, Image.SCALE_SMOOTH)
 
         refreshTheme()
@@ -472,6 +475,7 @@ open class MeepMeep @JvmOverloads constructor(private val windowSize: Int, fps: 
         FIELD_POWERPLAY_KAI_LIGHT,
         FIELD_CENTERSTAGE_OFFICIAL,
         FIELD_CENTERSTAGE_JUICE_DARK,
-        FIELD_CENTERSTAGE_JUICE_LIGHT
+        FIELD_CENTERSTAGE_JUICE_LIGHT,
+        OFF_SEASON_BGS,
     }
 }
